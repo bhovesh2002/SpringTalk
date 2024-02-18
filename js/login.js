@@ -9,7 +9,7 @@ function handleLogin(event){
         password: password
     };
 
-    fetch('http://13.201.100.52:8080/api/v1/users/login',{
+    fetch('https://springtalk.onrender.com/api/v1/users/login',{
         method: 'POST',
         headers:{
             'Content-Type':'application/json'
