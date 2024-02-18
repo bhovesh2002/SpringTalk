@@ -12,7 +12,7 @@ function loadAndDisplayUsers() {
     // Clear any existing content in the userListElement
     userListElement.innerHTML = "Loading...";
     // Retrieve the userList from Local Storage
-    fetch('http://13.201.100.52:8080/api/v1/users')
+    fetch('https://springtalk.onrender.com/api/v1/users')
         .then((response) => {
             return response.json();
         })
@@ -45,7 +45,7 @@ window.addEventListener("load", loadAndDisplayUsers);
 
 
 function handleLogout() {
-    fetch('http://13.201.100.52:8080/api/v1/users/logout', {
+    fetch('https://springtalk.onrender.com/api/v1/users/logout', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
