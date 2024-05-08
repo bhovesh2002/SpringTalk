@@ -22,22 +22,23 @@ function loadAndDisplayUsers() {
         });
 }
 
-// function displayUsers(userList, userListElement) {
-//     userListElement.innerHTML = "";
+function displayUsers(userList, userListElement) {
+    userListElement.innerHTML = "";
 
-//     // Loop through the userList and create list items to display each user
-//     userList.forEach(user => {
-//         const listItem = document.createElement("li");
-//         listItem.innerHTML = `
-//                 <div>
-//                     <i class="fa fa-user-circle"></i>
-//                     ${user.username} <i class="user-email">(${user.email})</i>
-//                 </div>
-//                 <i class="fa fa-lightbulb-o ${user.status === "online" ? "online" : "offline"}"></i>
-//             `;
-//         userListElement.appendChild(listItem);
-//     });
-// }
+    // Loop through the userList and create list items to display each user
+    for (let i = 0; i < 5 && i < userList.length; i++) {
+    const user = userList[i];
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `
+        <div>
+            <i class="fa fa-user-circle"></i>
+            ${user.username} <i class="user-email">(${user.email})</i>
+        </div>
+        <i class="fa fa-lightbulb-o ${user.status === "online" ? "online" : "offline"}"></i>
+    `;
+    userListElement.appendChild(listItem);
+}
+}
 
 // Call the loadAndDisplayUsers function when the page loads
 window.addEventListener("load", loadAndDisplayUsers);
