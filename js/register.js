@@ -14,7 +14,7 @@ function handleRegistration(event) {
         password: password,
         status: status,
     };
-    fetch('https://springtalk.onrender.com/api/v1/users', {
+    fetch('https://springtalk-latest.onrender.com/api/v1/users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
